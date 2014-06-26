@@ -1,0 +1,8 @@
+module fulladder(s,c,a,b,cin);
+output c,s;
+input a,b,cin;
+wire s1,c1,c2;
+halfadder g1(s1,c1,a,b);
+halfadder g2(s,c2,s1,cin);
+or g3(c,c1,c2);
+endmodule

@@ -1,0 +1,10 @@
+module decoder3by8(d,a,b,e);
+    input a;
+    input b;
+    input e;
+    output [7:0]d;
+    wire k;
+	 not gg(k,e);
+	 decoder2by4 pp(d[0],d[1],d[2],d[3],a,b,k);
+	 decoder2by4 ee(d[4],d[5],d[6],d[7],a,b,e);
+endmodule

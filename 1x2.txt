@@ -1,0 +1,8 @@
+module demux1x2(o1,o2,i,s);
+    input i,s;
+	 output o1,o2;   
+	 wire n0;
+	 not nn(n0,s);
+	 and a11(o1,n0,i);
+	 and a12(o2,s,i);
+endmodule

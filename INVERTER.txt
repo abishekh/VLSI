@@ -1,0 +1,1 @@
+module inverter_sw(out,in);    input in,    output out;    supply0 a;	 supply1 b;	 nmos(out,a,in);	 pmos(out,b,in);endmodule

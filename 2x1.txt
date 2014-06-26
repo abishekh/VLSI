@@ -1,0 +1,11 @@
+module mux2by1(y,a,b,s);
+    output y;
+    input a;
+    input b;
+    input s;
+    wire a1,a2,n1;
+	 not nn(n1,s);
+	 and aa1(a1,a,n1);
+	 and aa2(a2,b,s);
+	 or o1(y,a1,a2);
+endmodule

@@ -1,0 +1,10 @@
+module srflipflop(q,q1,s,r,clk);
+    input s,r,clk;
+    inout q,q1;
+	 wire so,ro;
+	 and a1(so,s,clk);
+	 and a2(ro,r,clk);
+	 nor n1(q,ro,q1);
+	 nor n2(q1,so,q);
+ 
+endmodule

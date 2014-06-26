@@ -1,0 +1,1 @@
+module BCDadder(carry,bcdsum,a,b);    input [3:0]a,b;	 output [3:0]bcdsum;	 output carry;    wire k;	 wire [3:0]binsum;	 assign{k,binsum}=a+b;	 assign carry=(k)?1:(binsum>4'b 1001)?1:1'b0;	 assign bcdsum=(carry) ? binsum+4'b 0110:binsum;endmodule

@@ -1,0 +1,12 @@
+module Tflipflop(q,q1,t,cp);
+    input t;
+    input cp;
+    output q;
+    output q1;
+	 wire o1,o2;
+	 and g1(o1,t,q,cp);
+	 and g2(o2,t,q1,cp);
+	 nor g3(q,q1,o1);
+	 nor g4(q1,q,o2);
+
+endmodule

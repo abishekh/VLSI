@@ -1,0 +1,1 @@
+module and1(a,b,c,y);    input a,b,c;    output y;	 reg y;	 always@(a or b or c)	 begin	 y<=a&b&c;	 endendmodule

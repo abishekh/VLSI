@@ -1,0 +1,16 @@
+module decoder2by4(d0,d1,d2,d3,a,b,e);
+    input a;
+    input b;
+    input e;
+    output d0;
+    output d1;
+    output d2;
+    output d3;
+    wire c,d;
+	 not jj(c,a);
+	 not kk(d,b);
+	 and aa(d0,c,d,e);
+	 and bb(d1,c,b,e);
+	 and cc(d2,a,d,e);
+	 and dd(d3,a,b,e);
+endmodule

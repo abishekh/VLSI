@@ -1,0 +1,8 @@
+module demux1x4(o1,o2,o3,o4,i,s1,s2);
+    output o1,o2,o3,o4;
+    input i,s1,s2;
+    wire w1,w2;
+	 demux1x2 d1(w1,w2,i,s1);
+	 demux1x2 d2(o1,o2,w1,s2);
+	 demux1x2 d3(o3,o4,w2,s2);
+endmodule
